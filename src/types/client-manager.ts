@@ -86,23 +86,59 @@ export class ClientManager {
     this._algorand = algorandClient
   }
 
-  /** Returns an algosdk Algod API client. */
+  /**
+   * Returns the algod client instance associated with this ClientManager.
+   * @example
+   * ```typescript
+   * const algodClient = clientManager.algod
+   * const params = await algodClient.getTransactionParams().do()
+   * ```
+   * @returns The algod client instance
+   */
   public get algod(): algosdk.Algodv2 {
     return this._algod
   }
 
-  /** Returns an algosdk Indexer API client or throws an error if it's not been provided. */
+  /**
+   * Returns the indexer client instance associated with this ClientManager.
+   * @example
+   * ```typescript
+   * const indexerClient = clientManager.indexer
+   * const account = await indexerClient.lookupAccountByID(address).do()
+   * ```
+   * @returns The indexer client instance
+   * @throws Error if no indexer client was configured
+   */
   public get indexer(): algosdk.Indexer {
     if (!this._indexer) throw new Error('Attempt to use Indexer client in AlgoKit instance with no Indexer configured')
     return this._indexer
   }
 
-  /** Returns an algosdk Indexer API client or `undefined` if it's not been provided. */
+  /**
+   * Returns the indexer client instance if it exists, otherwise undefined.
+   * @example
+   * ```typescript
+   * const indexer = clientManager.indexerIfPresent
+   * if (indexer) {
+   *   const account = await indexer.lookupAccountByID(address).do()
+   * }
+   * ```
+   * @returns The indexer client instance if configured, otherwise undefined
+   */
   public get indexerIfPresent(): algosdk.Indexer | undefined {
     return this._indexer
   }
 
-  /** Returns an algosdk KMD API client or throws an error if it's not been provided. */
+  /**
+   * Returns the KMD client instance associated with this ClientManager.
+   * @example
+   * ```typescript
+   * const kmdClient = clientManager.kmd
+   * const wallets = await kmdClient.listWallets()
+   * ```
+   * @returns The KMD client instance
+   * @throws Error if no KMD client was configured
+   */
   public get kmd(): algosdk.Kmd {
     if (!this._kmd) throw new Error('Attempt to use Kmd client in AlgoKit instance with no Kmd configured')
     return this._kmd
@@ -134,97 +170,103 @@ export class ClientManager {
   }
 
   /**
-   * Returns true if the given network genesisId is associated with a LocalNet network.
-   * @param genesisId The network genesis ID
-   * @returns Whether the given genesis ID is associated with a LocalNet network
+   * Returns whether the provided genesis ID represents a LocalNet network.
+   * @param genesisId The genesis ID to check
+   * @example
+   * ```typescript
+   * const isLocal = ClientManager.genesisIdIsLocalNet('sandnet-v1')
+   * ```
+   * @returns True if the genesis ID represents a LocalNet network
    */
   public static genesisIdIsLocalNet(genesisId: string) {
     return genesisIdIsLocalNet(genesisId)
   }
 
   /**
-   * Returns true if the current network is LocalNet.
-   * @returns True if the current network is LocalNet.
+   * Returns whether the current network is a LocalNet network.
+   * @example
+   * ```typescript
+   * const isLocal = await clientManager.isLocalNet()
+   * if (isLocal) {
+   *   // Handle LocalNet specific logic
+   * }
+   * ```
+   * @returns True if the current network is a LocalNet network
    */
   public async isLocalNet() {
     return (await this.network()).isLocalNet
   }
 
   /**
-   * Returns true if the current network is TestNet.
-   * @returns True if the current network is TestNet.
+   * Returns whether the current network is TestNet.
+   * @example
+   * ```typescript
+   * const isTest = await clientManager.isTestNet()
+   * if (isTest) {
+   *   // Handle TestNet specific logic
+   * }
+   * ```
+   * @returns True if the current network is TestNet
    */
   public async isTestNet() {
     return (await this.network()).isTestNet
   }
 
   /**
-   * Returns true if the current network is MainNet.
-   * @returns True if the current network is MainNet.
+   * Returns whether the current network is MainNet.
+   * @example
+   * ```typescript
+   * const isMain = await clientManager.isMainNet()
+   * if (isMain) {
+   *   // Handle MainNet specific logic
+   * }
+   * ```
+   * @returns True if the current network is MainNet
    */
   public async isMainNet() {
     return (await this.network()).isMainNet
   }
 
   /**
-   * Returns a TestNet Dispenser API client.
-   *
-   * Refer to [docs](https://github.com/algorandfoundation/algokit/blob/main/docs/testnet_api.md) on guidance to obtain an access token.
-   *
-   * @param params An object containing parameters for the TestNetDispenserApiClient class.
+   * Creates a new TestNet dispenser API client with the provided parameters.
+   * @param params The parameters for configuring the TestNet dispenser client
    * @example
-   * const client = clientManager.getTestNetDispenser(
-   *     {
-   *       authToken: 'your_auth_token',
-   *       requestTimeout: 15,
-   *     }
-   * )
-   *
-   * @returns An instance of the TestNetDispenserApiClient class.
+   * ```typescript
+   * const dispenser = clientManager.getTestNetDispenser({
+   *   authToken: 'your-auth-token'
+   * })
+   * ```
+   * @returns A new TestNet dispenser API client
    */
   public getTestNetDispenser(params: TestNetDispenserApiClientParams) {
     return new TestNetDispenserApiClient(params)
   }
 
   /**
-   * Returns a TestNet Dispenser API client, loading the auth token from `process.env.ALGOKIT_DISPENSER_ACCESS_TOKEN`.
-   *
-   * Refer to [docs](https://github.com/algorandfoundation/algokit/blob/main/docs/testnet_api.md) on guidance to obtain an access token.
-   *
-   * @param params An object containing parameters for the TestNetDispenserApiClient class.
+   * Creates a new TestNet dispenser API client using environment variables for configuration.
+   * @param params Optional parameters for configuring the TestNet dispenser client (auth token will be loaded from environment)
    * @example
-   * const client = clientManager.getTestNetDispenserFromEnvironment(
-   *     {
-   *       requestTimeout: 15,
-   *     }
-   * )
-   *
-   * @returns An instance of the TestNetDispenserApiClient class.
+   * ```typescript
+   * const dispenser = clientManager.getTestNetDispenserFromEnvironment()
+   * ```
+   * @returns A new TestNet dispenser API client configured from environment variables
    */
   public getTestNetDispenserFromEnvironment(params?: Omit<TestNetDispenserApiClientParams, 'authToken'>) {
     return new TestNetDispenserApiClient(params ? { ...params, authToken: '' } : undefined)
   }
 
   /**
-   * Returns a new `AppFactory` client
-   * @example Basic example
+   * Creates a new app factory for deploying Algorand applications.
+   * @param params The parameters for configuring the app factory
+   * @example
    * ```typescript
-   * const factory = algorand.client.getAppFactory({
-   *   appSpec: '{/* ARC-56 or ARC-32 compatible JSON *\/}',
+   * const factory = clientManager.getAppFactory({
+   *   sender: senderAccount,
+   *   version: 1
    * })
    * ```
-   * @example Advanced example
-   * ```typescript
-   * const factory = algorand.client.getAppFactory({
-   *   appSpec: parsedAppSpec_AppSpec_or_Arc56Contract,
-   *   defaultSender: "SENDERADDRESS",
-   *   appName: "OverriddenAppName",
-   *   version: "2.0.0",
-   *   updatable: true,
-   *   deletable: false,
-   *   deployTimeParams: { ONE: 1, TWO: 'value' }
-   * })
-   * ```
+   * @returns A new app factory instance
+   * @throws Error if the ClientManager was not initialized with an Algorand client
    */
   public getAppFactory(params: ClientAppFactoryParams) {
     if (!this._algorand) {
@@ -446,9 +488,17 @@ export class ClientManager {
     }
   }
 
-  /** Retrieve the algod configuration from environment variables (expects to be called from a Node.js environment)
-   *
-   * Expects `process.env.ALGOD_SERVER` to be defined, and you can also specify `process.env.ALGOD_PORT` and `process.env.ALGOD_TOKEN`.
+  /**
+   * Retrieve the algod configuration from environment variables (expects to be called from a Node.js environment).
+   * @example
+   * ```typescript
+   * // Requires process.env.ALGOD_SERVER to be set
+   * // Optional: process.env.ALGOD_PORT and process.env.ALGOD_TOKEN
+   * const config = ClientManager.getAlgodConfigFromEnvironment()
+   * const client = ClientManager.getAlgodClient(config)
+   * ```
+   * @throws Error if called from non-Node.js context or if ALGOD_SERVER is not defined
+   * @returns The algod configuration from environment variables
    */
   public static getAlgodConfigFromEnvironment(): AlgoClientConfig {
     if (!process || !process.env) {
@@ -468,8 +518,15 @@ export class ClientManager {
 
   /**
    * Retrieve the indexer configuration from environment variables (expects to be called from a Node.js environment).
-   *
-   * Expects `process.env.INDEXER_SERVER` to be defined, and you can also specify `process.env.INDEXER_PORT` and `process.env.INDEXER_TOKEN`.
+   * @example
+   * ```typescript
+   * // Requires process.env.INDEXER_SERVER to be set
+   * // Optional: process.env.INDEXER_PORT and process.env.INDEXER_TOKEN
+   * const config = ClientManager.getIndexerConfigFromEnvironment()
+   * const client = ClientManager.getIndexerClient(config)
+   * ```
+   * @throws Error if called from non-Node.js context or if INDEXER_SERVER is not defined
+   * @returns The indexer configuration from environment variables
    */
   public static getIndexerConfigFromEnvironment(): AlgoClientConfig {
     if (!process || !process.env) {
@@ -487,10 +544,21 @@ export class ClientManager {
     }
   }
 
-  /** Returns the Algorand configuration to point to the free tier of the AlgoNode service.
-   *
+  /**
+   * Returns the Algorand configuration to point to the free tier of the AlgoNode service.
    * @param network Which network to connect to - TestNet or MainNet
    * @param config Which algod config to return - Algod or Indexer
+   * @example TestNet Algod
+   * ```typescript
+   * const config = ClientManager.getAlgoNodeConfig('testnet', 'algod')
+   * const client = ClientManager.getAlgodClient(config)
+   * ```
+   * @example MainNet Indexer
+   * ```typescript
+   * const config = ClientManager.getAlgoNodeConfig('mainnet', 'indexer')
+   * const client = ClientManager.getIndexerClient(config)
+   * ```
+   * @returns The AlgoNode configuration for the specified network and client type
    */
   public static getAlgoNodeConfig(network: 'testnet' | 'mainnet', config: 'algod' | 'indexer'): AlgoClientConfig {
     return {
@@ -499,9 +567,20 @@ export class ClientManager {
     }
   }
 
-  /** Returns the Algorand configuration to point to the default LocalNet.
-   *
+  /**
+   * Returns the Algorand configuration to point to the default LocalNet.
    * @param configOrPort Which algod config to return - algod, kmd, or indexer OR a port number
+   * @example Default algod config
+   * ```typescript
+   * const config = ClientManager.getDefaultLocalNetConfig('algod')
+   * const client = ClientManager.getAlgodClient(config)
+   * ```
+   * @example Custom port
+   * ```typescript
+   * const config = ClientManager.getDefaultLocalNetConfig(4001)
+   * const client = ClientManager.getAlgodClient(config)
+   * ```
+   * @returns The LocalNet configuration for the specified client type or port
    */
   public static getDefaultLocalNetConfig(configOrPort: 'algod' | 'indexer' | 'kmd' | number): AlgoClientConfig {
     return {

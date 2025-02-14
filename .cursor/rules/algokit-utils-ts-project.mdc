@@ -1,0 +1,57 @@
+---
+description: Project structure
+globs: 
+---
+ # AlgoKit Utils TypeScript Project
+
+This file contains rules and descriptions for the AlgoKit Utils TypeScript project.
+
+<rule>
+name: algokit_utils_ts_project
+description: Project structure and conventions for AlgoKit Utils TypeScript library
+filters:
+  - type: directory
+    pattern: "src/"
+  - type: file_extension
+    pattern: "\\.ts$"
+
+actions:
+  - type: inform
+    message: |
+      AlgoKit Utils TypeScript is a utilities library designed to interact with the Algorand network.
+      
+      Project Structure:
+      - Main source code is located in the `src/` directory
+      - Test files follow the naming pattern `*.spec.ts`
+      - Written in TypeScript for type safety and better developer experience
+      
+      Key Conventions:
+      1. Source Files:
+         - Located in: src/
+         - Extension: .ts
+         - Purpose: Contains the main library code
+      
+      2. Test Files:
+         - Located in: src/ (alongside source files)
+         - Naming: *.spec.ts
+         - Purpose: Contains test suites for the library
+
+      3. TypeScript:
+         - Strict type checking enabled
+         - Modern TypeScript features utilized
+         - Clean and maintainable code structure
+
+examples:
+  - input: |
+      src/
+      ├── index.ts
+      ├── feature.ts
+      ├── feature.spec.ts
+      └── types/
+          └── common.ts
+    output: "Valid project structure following conventions"
+
+metadata:
+  priority: medium
+  version: 1.0
+</rule>

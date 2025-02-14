@@ -1,0 +1,87 @@
+---
+description: No Code Deletion
+globs: 
+---
+ # No Code Deletion
+
+This rule establishes guidelines to prevent accidental or unnecessary code deletion.
+
+<rule>
+name: no_code_deletion
+description: Standards for handling existing code to prevent accidental deletion
+filters:
+  # Match any source code files
+  - type: file_extension
+    pattern: "\\.(ts|js|json|md)$"
+  # Match file modification events
+  - type: event
+    pattern: "file_modify"
+
+actions:
+  - type: suggest
+    message: |
+      When modifying existing code:
+
+      1. Never delete code outright - instead:
+         - Comment out code that might be needed later
+         - Add clear documentation explaining why the code is commented out
+         - Include a TODO or FIXME comment if temporary
+         - Move to an archive file if substantial
+
+      2. When removing functionality:
+         - Create a deprecation notice first
+         - Allow time for migration
+         - Document the replacement approach
+         - Keep backwards compatibility where possible
+
+      3. Before removing code, consider:
+         - Is this code used elsewhere?
+         - Could it be useful for future features?
+         - Is it part of the public API?
+         - Are there dependencies on this code?
+
+      4. Proper documentation for commented code:
+         ```typescript
+         // DEPRECATED: This method is deprecated as of v2.0.0
+         // Use newMethod() instead. Will be removed in v3.0.0
+         // @deprecated
+         function oldMethod() {
+           // ... existing code ...
+         }
+         ```
+
+examples:
+  - input: |
+      // Bad: Direct deletion
+      function oldFeature() {
+        // Implementation
+      }
+      
+      // Good: Proper deprecation
+      /**
+       * @deprecated Since v2.0.0. Use newFeature() instead.
+       * Will be removed in v3.0.0
+       */
+      function oldFeature() {
+        // Implementation
+      }
+    output: "Properly handled code deprecation"
+
+  - input: |
+      // Bad: Removing without documentation
+      // delete entire block of code
+      
+      // Good: Commenting with explanation
+      /* Temporarily commented out for feature X testing
+       * TODO: Re-enable once feature X is stable
+       * Original code:
+       * function processData() {
+       *   // ... implementation
+       * }
+       */
+    output: "Properly documented code removal"
+
+metadata:
+  priority: high
+  version: 1.0
+</rule>

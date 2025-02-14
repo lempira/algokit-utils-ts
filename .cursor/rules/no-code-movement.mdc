@@ -1,0 +1,85 @@
+---
+description: No Code Movement
+globs: 
+---
+# No Code Movement
+
+This rule establishes guidelines to prevent unnecessary movement of code elements within files.
+
+<rule>
+name: no_code_movement
+description: Standards for maintaining code position stability within files
+filters:
+  # Match any source code files
+  - type: file_extension
+    pattern: "\\.(ts|js|json|md)$"
+  # Match file modification events
+  - type: event
+    pattern: "file_modify"
+
+actions:
+  - type: suggest
+    message: |
+      When modifying existing files:
+
+      1. Never move existing code elements:
+         - Keep functions in their original position
+         - Maintain property and field order
+         - Preserve class member ordering
+         - Keep import statements in their original order
+
+      2. When adding new code:
+         - Add new functions at the end of their logical group
+         - Add new properties at the end of their respective blocks
+         - Add new imports at the end of the import block
+         - Document position-dependent code with comments
+
+      3. Exceptions (require explicit justification):
+         - Moving code for critical bug fixes
+         - Reorganizing for major version changes
+         - Refactoring with team consensus
+         - Moving code that has position-dependent behavior
+
+      4. Best practices:
+         - Keep related code together by adding new code nearby
+         - Use comments to indicate logical groupings
+         - Document any position-dependent requirements
+         - Use region markers for better organization
+
+examples:
+  - input: |
+      // Bad: Moving functions around
+      class Example {
+        newFunction() {}  // Added at the top
+        existingFunction1() {}
+        existingFunction2() {}
+      }
+      
+      // Good: Adding new function at the end
+      class Example {
+        existingFunction1() {}
+        existingFunction2() {}
+        newFunction() {}  // Added at the end
+      }
+    output: "Properly maintained code position"
+
+  - input: |
+      // Bad: Reordering properties
+      interface Config {
+        newProp: string;  // Added at the top
+        existingProp1: number;
+        existingProp2: boolean;
+      }
+      
+      // Good: Adding new property at the end
+      interface Config {
+        existingProp1: number;
+        existingProp2: boolean;
+        newProp: string;  // Added at the end
+      }
+    output: "Properly maintained property order"
+
+metadata:
+  priority: high
+  version: 1.0
+</rule>

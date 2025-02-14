@@ -1,0 +1,72 @@
+---
+description: JSDoc Conventions
+globs: 
+---
+ # JSDoc Conventions
+
+This file contains rules and descriptions for writing JSDoc comments in the AlgoKit Utils TypeScript project.
+
+<rule>
+name: jsdoc_conventions
+description: Standards for writing JSDoc comments in the codebase
+filters:
+  - type: file_extension
+    pattern: "\\.ts$"
+  - type: content
+    pattern: "/\\*\\*[\\s\\S]*?\\*/"
+
+actions:
+  - type: inform
+    message: |
+      JSDoc comments in this project should follow these conventions:
+
+      Key Requirements:
+      1. Documentation Scope:
+         - Only public functions/methods require JSDoc documentation
+         - Internal/private functions can have simpler comments
+      
+      2. Documentation Content:
+         - Precise and clear description of what the function does
+         - Parameter descriptions using @param when applicable
+         - Return value description using @returns when applicable
+         - Include practical examples using @example
+      
+      3. Example Format:
+         - Examples should be in TypeScript
+         - Show practical use cases
+         - Include code blocks with syntax highlighting
+         - Demonstrate typical usage patterns
+
+      4. Style Guidelines:
+         - Use complete sentences
+         - Be concise but comprehensive
+         - Include type information where relevant
+         - Maintain consistent indentation in examples
+
+examples:
+  - input: |
+      /**
+       * Get details about the current network.
+       * @example Getting genesis ID
+       * ```typescript
+       * const network = await networkClient.network()
+       * const genesisId = network.genesisId
+       * ```
+       * @returns The current network details
+       */
+      public async network(): Promise<NetworkDetails> {
+        // ... function implementation ...
+      }
+    output: "Valid JSDoc following conventions"
+
+  - input: |
+      // Bad example - insufficient documentation
+      public async getNetwork() {
+        // ... function implementation ...
+      }
+    output: "Invalid - missing proper JSDoc documentation"
+
+metadata:
+  priority: high
+  version: 1.0
+</rule>

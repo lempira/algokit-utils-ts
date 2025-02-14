@@ -4,6 +4,20 @@ import ABIContractParams = algosdk.ABIContractParams
 import ABIMethodParams = algosdk.ABIMethodParams
 import ABIMethod = algosdk.ABIMethod
 
+/**
+ * Converts an ARC-32 Application Specification to an ARC-56 Contract format.
+ * This function transforms the contract specification from one format to another while preserving
+ * all relevant information about methods, state, and contract structure.
+ *
+ * @param appSpec - The ARC-32 Application Specification to convert
+ * @returns An ARC-56 Contract representation of the input specification
+ *
+ * @example
+ * ```typescript
+ * const arc32Spec = getARC32Spec() // Your ARC-32 spec
+ * const arc56Contract = arc32ToArc56(arc32Spec)
+ * ```
+ */
 export function arc32ToArc56(appSpec: AppSpec): Arc56Contract {
   const arc32Structs = Object.values(appSpec.hints).flatMap((hint) => Object.entries(hint.structs ?? {}))
   const structs = Object.fromEntries(
@@ -138,176 +152,193 @@ export function arc32ToArc56(appSpec: AppSpec): Arc56Contract {
   } satisfies Arc56Contract
 }
 
-/** An ARC-0032 Application Specification see https://github.com/algorandfoundation/ARCs/pull/150 */
+/**
+ * An ARC-0032 Application Specification.
+ * Represents the complete specification of an Algorand smart contract following the ARC-0032 standard.
+ * @see {@link https://github.com/algorandfoundation/ARCs/pull/150}
+ */
 export interface AppSpec {
-  /** Method call hints */
+  /** Method call hints providing additional information about contract methods */
   hints: HintSpec
-  /** The TEAL source */
+  /** The TEAL source code for both approval and clear programs */
   source: AppSources
-  /** The ABI-0004 contract definition see https://github.com/algorandfoundation/ARCs/blob/main/ARCs/arc-0004.md */
+  /**
+   * The ABI-0004 contract definition containing method specifications
+   * @see {@link https://github.com/algorandfoundation/ARCs/blob/main/ARCs/arc-0004.md}
+   */
   contract: ABIContractParams
-  /** The values that make up the local and global state */
+  /** Detailed schema specification for local and global state */
   schema: SchemaSpec
-  /** The rolled-up schema allocation values for local and global state */
+  /** Summary of schema allocation values for local and global state */
   state: StateSchemaSpec
-  /** The config of all BARE calls (i.e. non ABI calls with no args) */
+  /** Configuration for bare calls (non-ABI calls with no arguments) */
   bare_call_config: CallConfig
 }
 
-/** A lookup of encoded method call spec to hint */
+/** A mapping of encoded method call specifications to their corresponding hints */
 export type HintSpec = Record<string, Hint>
 
-/** The TEAL source of a contract */
+/**
+ * Contains the TEAL source code for a contract's programs
+ */
 export interface AppSources {
-  /** The TEAL source of the approval program */
+  /** The TEAL source code for the approval program */
   approval: string
-  /** The TEAL source of the clear program */
+  /** The TEAL source code for the clear program */
   clear: string
 }
 
-/** The various call configs:
- *  * `NEVER`: Will not be called
- *  * `CALL`: Can be called during a non-create call i.e. app id != 0
- *  * `CREATE`: Can be called during a create call i.e. app id = 0
- *  * `ALL`: Can be during a create OR non-create call
- **/
+/**
+ * Defines when a method can be called in the contract lifecycle:
+ * - 'NEVER': Will not be called
+ * - 'CALL': Can be called during a non-create call (app id != 0)
+ * - 'CREATE': Can be called during a create call (app id = 0)
+ * - 'ALL': Can be called during both create and non-create calls
+ */
 export type CallConfigValue = 'NEVER' | 'CALL' | 'CREATE' | 'ALL'
 
-/** Call configuration for a method */
+/**
+ * Configuration specifying when different types of calls can be made to the contract
+ */
 export interface CallConfig {
-  /** NoOp call config */
+  /** Configuration for NoOp calls */
   no_op?: CallConfigValue
-  /** Opt-in call config */
+  /** Configuration for Opt-in calls */
   opt_in?: CallConfigValue
-  /** Close out call config */
+  /** Configuration for Close out calls */
   close_out?: CallConfigValue
-  /** Update call config */
+  /** Configuration for Update application calls */
   update_application?: CallConfigValue
-  /** Delete call config */
+  /** Configuration for Delete application calls */
   delete_application?: CallConfigValue
 }
 
-/** Hint information for a given method call to allow client generation */
+/**
+ * Additional information about a method call to assist in client generation
+ */
 export interface Hint {
-  /** Any user-defined struct/tuple types used in the method call, keyed by parameter name or `output` for return type */
+  /** User-defined struct/tuple types used in the method, keyed by parameter name or 'output' for return type */
   structs?: Record<string, Struct>
+  /** Indicates if the method is read-only */
   read_only?: boolean
+  /** Default values for method arguments */
   default_arguments?: Record<string, DefaultArgument>
+  /** Configuration for when this method can be called */
   call_config: CallConfig
 }
 
-/** The name of a field */
+/** Name of a field in a struct/tuple */
 export type FieldName = string
 
-/** The string name of an ABI type */
+/** String representation of an ABI type */
 export type ABIType = string
 
-/** The elements of the struct/tuple: `FieldName`, `ABIType` */
+/** Tuple representing a struct/tuple element: [fieldName, abiType] */
 export type StructElement = [FieldName, ABIType]
 
-/** A user-defined struct/tuple type */
+/**
+ * Definition of a user-defined struct/tuple type
+ */
 export interface Struct {
-  /** The name of the type */
+  /** Name of the struct/tuple type */
   name: string
-  /** The elements (in order) that make up the struct/tuple */
+  /** Ordered list of elements that compose the struct/tuple */
   elements: StructElement[]
 }
 
 /**
- * Defines a strategy for obtaining a default value for a given ABI arg.
+ * Defines different strategies for obtaining default values for ABI arguments
  */
 export type DefaultArgument =
   | {
-      /**
-       * The default value should be fetched by invoking an ABI method
-       */
+      /** Default value from an ABI method call */
       source: 'abi-method'
       data: ABIMethodParams
     }
   | {
-      /**
-       * The default value should be fetched from global state
-       */
+      /** Default value from global state */
       source: 'global-state'
-      /**
-       * The key of the state variable
-       */
+      /** Key of the state variable */
       data: string
     }
   | {
-      /**
-       * The default value should be fetched from the local state of the sender user
-       */
+      /** Default value from sender's local state */
       source: 'local-state'
-      /**
-       * The key of the state variable
-       */
+      /** Key of the state variable */
       data: string
     }
   | {
-      /**
-       * The default value is a constant.
-       */
+      /** Static constant default value */
       source: 'constant'
-      /**
-       * The static default value to use.
-       */
+      /** The literal default value */
       data: string | number
     }
 
-/** AVM data type */
+/** Supported AVM (Algorand Virtual Machine) data types */
 export type AVMType = 'uint64' | 'bytes'
 
-/** Declared schema value specification */
+/**
+ * Specification for a declared schema value
+ */
 export interface DeclaredSchemaValueSpec {
-  /** The type of value */
+  /** The AVM type of the value */
   type: AVMType
-  /** The name of the key */
+  /** The storage key name */
   key: string
-  /** A description of the variable */
+  /** Description of the variable's purpose */
   descr?: string
-  /** Whether or not the value is set statically (at create time only) or dynamically */
+  /** Whether the value is static (set only at create time) or dynamic */
   static?: boolean
 }
 
-/** Reserved schema value specification */
+/**
+ * Specification for reserved schema storage
+ */
 export interface ReservedSchemaValueSpec {
-  /** The type of value */
+  /** The AVM type of the value */
   type: AVMType
-  /** The description of the reserved storage space */
+  /** Description of the reserved storage's purpose */
   descr: string
-  /** The maximum number of slots to reserve */
+  /** Maximum number of storage slots to reserve */
   max_keys: number
 }
 
-/** The schema for global and local storage */
+/**
+ * Complete schema specification for contract storage
+ */
 export interface SchemaSpec {
-  /** The local storage schema */
+  /** Schema for per-account local storage */
   local: Schema
-  /** The global storage schema */
+  /** Schema for global contract storage */
   global: Schema
 }
 
-/** The storage schema definition */
+/**
+ * Definition of storage schema
+ */
 export interface Schema {
-  /** Declared storage schema */
+  /** Explicitly declared storage variables */
   declared: Record<string, DeclaredSchemaValueSpec>
-  /** Reserved storage schema */
+  /** Reserved storage space for dynamic allocation */
   reserved: Record<string, ReservedSchemaValueSpec>
 }
 
-/** The rolled-up schema allocation specification for local and global state */
+/**
+ * Summary of storage allocation requirements
+ */
 export interface StateSchemaSpec {
-  /** Global storage spec */
+  /** Global storage requirements */
   global: StateSchema
-  /** Local storage spec */
+  /** Per-account local storage requirements */
   local: StateSchema
 }
 
-/** Schema spec summary for global or local storage */
+/**
+ * Storage allocation specification
+ */
 export type StateSchema = {
-  /** Number of uint slots */
+  /** Number of uint64 slots required */
   num_uints: number
-  /** Number of byte slots */
+  /** Number of byte slice slots required */
   num_byte_slices: number
 }
