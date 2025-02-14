@@ -11,7 +11,8 @@ import Indexer = algosdk.Indexer
 import Algodv2 = algosdk.Algodv2
 
 /**
- * Clients from algosdk that interact with the official Algorand APIs
+ * A collection of Algorand SDK client instances that interact with the official Algorand APIs.
+ * Provides access to Algod, Indexer, and KMD clients.
  */
 export interface AlgoSdkClients {
   /**
@@ -29,47 +30,48 @@ export interface AlgoSdkClients {
 }
 
 /**
- * Params to get an app factory from `ClientManager`.
+ * Parameters used to create an app factory from `ClientManager`, excluding the Algorand client.
  */
 export type ClientAppFactoryParams = Expand<Omit<AppFactoryParams, 'algorand'>>
 
 /**
- * Params to get an app client by creator address and name from `ClientManager`.
+ * Parameters used to resolve an app client by creator address and name from `ClientManager`, excluding the Algorand client.
  */
 export type ClientResolveAppClientByCreatorAndNameParams = Expand<Omit<ResolveAppClientByCreatorAndName, 'algorand'>>
 
 /**
- * Params to get an app client by ID from `ClientManager`.
+ * Parameters used to create an app client by ID from `ClientManager`, excluding the Algorand client.
  */
 export type ClientAppClientParams = Expand<Omit<AppClientParams, 'algorand'>>
 
 /**
- * Params to get an app client by network from `ClientManager`.
+ * Parameters used to create an app client by network from `ClientManager`, excluding the Algorand client and app ID.
  */
 export type ClientAppClientByNetworkParams = Expand<Omit<AppClientParams, 'algorand' | 'appId'>>
 
 /**
- * Params to get a typed app client by creator address and name from `ClientManager`.
+ * Parameters used to resolve a typed app client by creator address and name from `ClientManager`, excluding the Algorand client and app specification.
  */
 export type ClientTypedAppClientByCreatorAndNameParams = Expand<Omit<ResolveAppClientByCreatorAndName, 'algorand' | 'appSpec'>>
 
 /**
- * Params to get a typed app client by ID from `ClientManager`.
+ * Parameters used to create a typed app client by ID from `ClientManager`, excluding the Algorand client and app specification.
  */
 export type ClientTypedAppClientParams = Expand<Omit<AppClientParams, 'algorand' | 'appSpec'>>
 
 /**
- * Params to get a typed app client by network from `ClientManager`.
+ * Parameters used to create a typed app client by network from `ClientManager`, excluding the Algorand client, app specification, and app ID.
  */
 export type ClientTypedAppClientByNetworkParams = Expand<Omit<AppClientParams, 'algorand' | 'appSpec' | 'appId'>>
 
 /**
- * Params to get a typed app factory from `ClientManager`.
+ * Parameters used to create a typed app factory from `ClientManager`, excluding the Algorand client and app specification.
  */
 export type ClientTypedAppFactoryParams = Expand<Omit<AppFactoryParams, 'algorand' | 'appSpec'>>
 
 /**
- * Exposes access to various API clients.
+ * Manages access to various Algorand API clients and provides helper methods for creating app clients and factories.
+ * This class serves as a centralized client manager for interacting with the Algorand blockchain.
  */
 export class ClientManager {
   private _algod: algosdk.Algodv2
@@ -130,15 +132,16 @@ export class ClientManager {
   }
 
   /**
-   * Retrieves the indexer client instance associated with this `ClientManager`.
-   *
+   * Gets the associated indexer client instance.
+   * 
+   * @throws Error if no Indexer client is configured
+   * @returns The indexer client instance
+   * 
    * @example
    * ```typescript
    * const indexerClient = clientManager.indexer
    * const account = await indexerClient.lookupAccountByID(address).do()
    * ```
-   * @returns The indexer client instance.
-   * @throws Error if no indexer client was configured.
    */
   public get indexer(): algosdk.Indexer {
     if (!this._indexer) throw new Error('Attempt to use Indexer client in AlgoKit instance with no Indexer configured')
@@ -146,8 +149,10 @@ export class ClientManager {
   }
 
   /**
-   * Retrieves the indexer client instance if it exists, otherwise returns undefined.
-   *
+   * Gets the indexer client instance if one is configured, otherwise returns undefined.
+   * 
+   * @returns The indexer client instance if configured, otherwise undefined
+   * 
    * @example
    * ```typescript
    * const indexer = clientManager.indexerIfPresent
@@ -155,22 +160,22 @@ export class ClientManager {
    *   const account = await indexer.lookupAccountByID(address).do()
    * }
    * ```
-   * @returns The indexer client instance if configured, otherwise undefined.
    */
   public get indexerIfPresent(): algosdk.Indexer | undefined {
     return this._indexer
   }
 
   /**
-   * Retrieves the KMD client instance associated with this `ClientManager`.
-   *
+   * Gets the associated KMD client instance.
+   * 
+   * @throws Error if no KMD client is configured
+   * @returns The KMD client instance
+   * 
    * @example
    * ```typescript
    * const kmdClient = clientManager.kmd
    * const wallets = await kmdClient.listWallets()
    * ```
-   * @returns The KMD client instance.
-   * @throws Error if no KMD client was configured.
    */
   public get kmd(): algosdk.Kmd {
     if (!this._kmd) throw new Error('Attempt to use Kmd client in AlgoKit instance with no Kmd configured')
@@ -180,14 +185,17 @@ export class ClientManager {
   private _getNetworkPromise: Promise<SuggestedParams> | undefined
 
   /**
-   * Retrieves details about the current network.
-   *
-   * @example Getting genesis ID
+   * Gets details about the current network, including whether it's MainNet, TestNet, or LocalNet.
+   * 
+   * @returns Promise that resolves to the network details
+   * 
+   * @example
    * ```typescript
-   * const network = await networkClient.network()
-   * const genesisId = network.genesisId
+   * const network = await clientManager.network()
+   * if (network.isTestNet) {
+   *   console.log('Connected to TestNet')
+   * }
    * ```
-   * @returns A promise that resolves to the current network details.
    */
   public async network(): Promise<NetworkDetails> {
     if (!this._getNetworkPromise) {
@@ -205,62 +213,63 @@ export class ClientManager {
   }
 
   /**
-   * Determines whether the provided genesis ID represents a LocalNet network.
-   *
-   * @param genesisId - The genesis ID to check.
+   * Determines if a genesis ID corresponds to a LocalNet network.
+   * 
+   * @param genesisId - The genesis ID to check
+   * @returns True if the genesis ID corresponds to LocalNet, false otherwise
+   * 
    * @example
    * ```typescript
    * const isLocal = ClientManager.genesisIdIsLocalNet('sandnet-v1')
    * ```
-   * @returns `true` if the genesis ID represents a LocalNet network, otherwise `false`.
    */
   public static genesisIdIsLocalNet(genesisId: string): boolean {
     return genesisIdIsLocalNet(genesisId)
   }
 
   /**
-   * Determines whether the current network is a LocalNet network.
-   *
+   * Checks if the current network is LocalNet.
+   * 
+   * @returns Promise that resolves to true if connected to LocalNet, false otherwise
+   * 
    * @example
    * ```typescript
-   * const isLocal = await clientManager.isLocalNet()
-   * if (isLocal) {
-   *   // Handle LocalNet specific logic
+   * if (await clientManager.isLocalNet()) {
+   *   console.log('Connected to LocalNet')
    * }
    * ```
-   * @returns A promise that resolves to `true` if the current network is LocalNet, otherwise `false`.
    */
   public async isLocalNet(): Promise<boolean> {
     return (await this.network()).isLocalNet
   }
 
   /**
-   * Determines whether the current network is TestNet.
-   *
+   * Checks if the current network is TestNet.
+   * 
+   * @returns Promise that resolves to true if connected to TestNet, false otherwise
+   * 
    * @example
    * ```typescript
-   * const isTest = await clientManager.isTestNet()
-   * if (isTest) {
-   *   // Handle TestNet specific logic
+   * if (await clientManager.isTestNet()) {
+   *   console.log('Connected to TestNet')
    * }
    * ```
-   * @returns A promise that resolves to `true` if the current network is TestNet, otherwise `false`.
    */
   public async isTestNet(): Promise<boolean> {
     return (await this.network()).isTestNet
   }
 
   /**
-   * Determines whether the current network is MainNet.
-   *
+   * Checks if the current network is MainNet.
+   * 
+   * @returns Promise that resolves to true if connected to MainNet, false otherwise
+   * 
    * @example
    * ```typescript
-   * const isMain = await clientManager.isMainNet()
-   * if (isMain) {
-   *   // Handle MainNet specific logic
+   * if (await clientManager.isMainNet()) {
+   *   console.log('Connected to MainNet')
    * }
    * ```
-   * @returns A promise that resolves to `true` if the current network is MainNet, otherwise `false`.
    */
   public async isMainNet(): Promise<boolean> {
     return (await this.network()).isMainNet
@@ -287,11 +296,19 @@ export class ClientManager {
   }
 
   /**
-   * Retrieves an instance of `AppFactory` with the provided parameters.
-   *
-   * @param params - Parameters for configuring the AppFactory.
-   * @returns An instance of `AppFactory`.
-   * @throws Error if no Algorand client is associated with the `ClientManager`.
+   * Gets an app factory for deploying and managing Algorand applications.
+   * 
+   * @param params - Parameters for configuring the app factory
+   * @returns An instance of AppFactory
+   * @throws Error if no Algorand client is configured
+   * 
+   * @example
+   * ```typescript
+   * const factory = clientManager.getAppFactory({
+   *   sender: senderAccount,
+   *   deploymentConfig: { version: 1 }
+   * })
+   * ```
    */
   public getAppFactory(params: ClientAppFactoryParams): AppFactory {
     if (!this._algorand) {
@@ -302,11 +319,20 @@ export class ClientManager {
   }
 
   /**
-   * Retrieves an `AppClient` instance by creator address and name.
-   *
-   * @param params - Parameters for resolving the AppClient.
-   * @returns An instance of `AppClient`.
-   * @throws Error if no Algorand client is associated with the `ClientManager`.
+   * Gets an app client by looking up the application using its creator address and name.
+   * 
+   * @param params - Parameters for resolving the app client
+   * @returns An instance of AppClient
+   * @throws Error if no Algorand client is configured
+   * 
+   * @example
+   * ```typescript
+   * const client = clientManager.getAppClientByCreatorAndName({
+   *   name: 'MyApp',
+   *   creator: creatorAddress,
+   *   sender: senderAccount
+   * })
+   * ```
    */
   public getAppClientByCreatorAndName(params: ClientResolveAppClientByCreatorAndNameParams): AppClient {
     if (!this._algorand) {
@@ -348,12 +374,24 @@ export class ClientManager {
   }
 
   /**
-   * Asynchronously retrieves a typed `AppClient` instance by creator address and name.
-   *
-   * @param typedClient - The typed client constructor.
-   * @param params - Parameters for resolving the typed AppClient.
-   * @returns A promise that resolves to an instance of the typed AppClient.
-   * @throws Error if no Algorand client is associated with the `ClientManager`.
+   * Gets a typed app client by looking up the application using its creator address and name.
+   * 
+   * @param typedClient - The typed client class
+   * @param params - Parameters for resolving the app client
+   * @returns Promise that resolves to an instance of the typed client
+   * @throws Error if no Algorand client is configured
+   * 
+   * @example
+   * ```typescript
+   * const client = await clientManager.getTypedAppClientByCreatorAndName(
+   *   MyAppClient,
+   *   {
+   *     name: 'MyApp',
+   *     creator: creatorAddress,
+   *     sender: senderAccount
+   *   }
+   * )
+   * ```
    */
   public async getTypedAppClientByCreatorAndName<TClient extends TypedAppClient<InstanceType<TClient>>>(
     typedClient: TClient,
@@ -367,12 +405,23 @@ export class ClientManager {
   }
 
   /**
-   * Retrieves a typed `AppClient` instance by application ID.
-   *
-   * @param typedClient - The typed client constructor.
-   * @param params - Parameters for configuring the typed AppClient.
-   * @returns An instance of the typed AppClient.
-   * @throws Error if no Algorand client is associated with the `ClientManager`.
+   * Gets a typed app client for an existing application by its ID.
+   * 
+   * @param typedClient - The typed client class
+   * @param params - Parameters for configuring the app client
+   * @returns An instance of the typed client
+   * @throws Error if no Algorand client is configured
+   * 
+   * @example
+   * ```typescript
+   * const client = clientManager.getTypedAppClientById(
+   *   MyAppClient,
+   *   {
+   *     appId: 123,
+   *     sender: senderAccount
+   *   }
+   * )
+   * ```
    */
   public getTypedAppClientById<TClient extends TypedAppClient<InstanceType<TClient>>>(
     typedClient: TClient,
@@ -385,14 +434,6 @@ export class ClientManager {
     return new typedClient({ ...params, algorand: this._algorand })
   }
 
-  /**
-   * Asynchronously retrieves a typed `AppClient` instance by network.
-   *
-   * @param typedClient - The typed client constructor.
-   * @param params - (Optional) Parameters for resolving the typed AppClient by network.
-   * @returns A promise that resolves to an instance of the typed AppClient.
-   * @throws Error if no Algorand client is associated with the `ClientManager`.
-   */
   public getTypedAppClientByNetwork<TClient extends TypedAppClient<InstanceType<TClient>>>(
     typedClient: TClient,
     params?: ClientTypedAppClientByNetworkParams,
@@ -405,12 +446,23 @@ export class ClientManager {
   }
 
   /**
-   * Retrieves a typed `AppFactory` instance.
-   *
-   * @param typedFactory - The typed factory constructor.
-   * @param params - (Optional) Parameters for configuring the typed AppFactory.
-   * @returns An instance of the typed AppFactory.
-   * @throws Error if no Algorand client is associated with the `ClientManager`.
+   * Gets a typed app factory for deploying and managing typed Algorand applications.
+   * 
+   * @param typedFactory - The typed factory class
+   * @param params - Optional parameters for configuring the app factory
+   * @returns An instance of the typed factory
+   * @throws Error if no Algorand client is configured
+   * 
+   * @example
+   * ```typescript
+   * const factory = clientManager.getTypedAppFactory(
+   *   MyAppFactory,
+   *   {
+   *     sender: senderAccount,
+   *     deploymentConfig: { version: 1 }
+   *   }
+   * )
+   * ```
    */
   public getTypedAppFactory<TClient>(typedFactory: TypedAppFactory<TClient>, params?: ClientTypedAppFactoryParams): TClient {
     if (!this._algorand) {
@@ -420,12 +472,6 @@ export class ClientManager {
     return new typedFactory({ ...params, algorand: this._algorand })
   }
 
-  /**
-   * Retrieves the default Algorand configuration from the environment or defaults to LocalNet.
-   *
-   * @returns The Algorand configuration.
-   * @throws Error if environment variables are not properly set in a Node.js context.
-   */
   public static getConfigFromEnvironmentOrLocalNet(): AlgoConfig {
     if (!process || !process.env) {
       throw new Error('Attempt to get default client configuration from a non Node.js context; supply the config instead')
@@ -451,12 +497,6 @@ export class ClientManager {
     }
   }
 
-  /**
-   * Retrieves the Algod client configuration from environment variables.
-   *
-   * @returns The Algod client configuration.
-   * @throws Error if environment variables are not properly set in a Node.js context.
-   */
   public static getAlgodConfigFromEnvironment(): AlgoClientConfig {
     if (!process || !process.env) {
       throw new Error('Attempt to get default algod configuration from a non Node.js context; supply the config instead')
@@ -473,12 +513,6 @@ export class ClientManager {
     }
   }
 
-  /**
-   * Retrieves the Indexer client configuration from environment variables.
-   *
-   * @returns The Indexer client configuration.
-   * @throws Error if environment variables are not properly set in a Node.js context.
-   */
   public static getIndexerConfigFromEnvironment(): AlgoClientConfig {
     if (!process || !process.env) {
       throw new Error('Attempt to get default indexer configuration from a non Node.js context; supply the config instead')
@@ -607,7 +641,8 @@ export class ClientManager {
 }
 
 /**
- * Interface to identify a typed client that can be used to interact with an application.
+ * Interface defining the structure of a typed client that can interact with an Algorand application.
+ * Provides methods for creating new instances and resolving existing applications.
  */
 export interface TypedAppClient<TClient> {
   /**
@@ -635,7 +670,8 @@ export interface TypedAppClient<TClient> {
 }
 
 /**
- * Interface to identify a typed factory that can be used to create and deploy an application.
+ * Interface defining the structure of a typed factory that can create and deploy Algorand applications.
+ * Provides methods for creating new instances with application specifications.
  */
 export interface TypedAppFactory<TClient> {
   /**
