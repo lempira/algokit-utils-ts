@@ -1,8 +1,8 @@
 ---
 description: No Code Deletion
-globs: 
+globs:
 ---
- # No Code Deletion
+# No Code Deletion
 
 This rule establishes guidelines to prevent accidental or unnecessary code deletion.
 
@@ -56,7 +56,7 @@ examples:
       function oldFeature() {
         // Implementation
       }
-      
+
       // Good: Proper deprecation
       /**
        * @deprecated Since v2.0.0. Use newFeature() instead.
@@ -70,7 +70,7 @@ examples:
   - input: |
       // Bad: Removing without documentation
       // delete entire block of code
-      
+
       // Good: Commenting with explanation
       /* Temporarily commented out for feature X testing
        * TODO: Re-enable once feature X is stable
