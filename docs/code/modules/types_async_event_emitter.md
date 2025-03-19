@@ -41,4 +41,4 @@
 
 #### Defined in
 
-[src/types/async-event-emitter.ts:3](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/async-event-emitter.ts#L3)
+[src/types/async-event-emitter.ts:3](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/async-event-emitter.ts#L3)

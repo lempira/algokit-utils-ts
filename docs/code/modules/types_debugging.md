@@ -28,7 +28,7 @@ The directory name for AlgoKit project related files
 
 #### Defined in
 
-[src/types/debugging.ts:9](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/debugging.ts#L9)
+[src/types/debugging.ts:9](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/debugging.ts#L9)
 
 ___
 
@@ -40,7 +40,7 @@ The default maximum search depth for file operations
 
 #### Defined in
 
-[src/types/debugging.ts:21](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/debugging.ts#L21)
+[src/types/debugging.ts:21](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/debugging.ts#L21)
 
 ___
 
@@ -52,7 +52,7 @@ The directory name for debug source files
 
 #### Defined in
 
-[src/types/debugging.ts:12](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/debugging.ts#L12)
+[src/types/debugging.ts:12](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/debugging.ts#L12)
 
 ___
 
@@ -64,7 +64,7 @@ The file extension for TEAL files
 
 #### Defined in
 
-[src/types/debugging.ts:15](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/debugging.ts#L15)
+[src/types/debugging.ts:15](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/debugging.ts#L15)
 
 ___
 
@@ -76,4 +76,4 @@ The file extension for TEAL source map files
 
 #### Defined in
 
-[src/types/debugging.ts:18](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/debugging.ts#L18)
+[src/types/debugging.ts:18](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/debugging.ts#L18)

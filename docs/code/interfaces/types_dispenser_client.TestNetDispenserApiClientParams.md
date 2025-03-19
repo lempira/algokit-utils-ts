@@ -23,7 +23,7 @@ The API auth token
 
 #### Defined in
 
-[src/types/dispenser-client.ts:41](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L41)
+[src/types/dispenser-client.ts:41](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L41)
 
 ___
 
@@ -35,4 +35,4 @@ The request timeout in seconds
 
 #### Defined in
 
-[src/types/dispenser-client.ts:43](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L43)
+[src/types/dispenser-client.ts:43](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L43)
