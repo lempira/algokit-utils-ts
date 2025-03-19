@@ -78,7 +78,7 @@ If neither the environment variable 'ALGOKIT_DISPENSER_ACCESS_TOKEN' nor the aut
 
 #### Defined in
 
-[src/types/dispenser-client.ts:76](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L76)
+[src/types/dispenser-client.ts:76](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L76)
 
 ## Properties
 
@@ -88,7 +88,7 @@ If neither the environment variable 'ALGOKIT_DISPENSER_ACCESS_TOKEN' nor the aut
 
 #### Defined in
 
-[src/types/dispenser-client.ts:73](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L73)
+[src/types/dispenser-client.ts:73](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L73)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[src/types/dispenser-client.ts:74](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L74)
+[src/types/dispenser-client.ts:74](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L74)
 
 ## Accessors
 
@@ -114,7 +114,7 @@ The authentication token used for API requests.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:92](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L92)
+[src/types/dispenser-client.ts:92](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L92)
 
 ___
 
@@ -130,7 +130,7 @@ The timeout for API requests, in seconds.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:96](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L96)
+[src/types/dispenser-client.ts:96](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L96)
 
 ## Methods
 
@@ -155,7 +155,7 @@ DispenserFundResponse: An object containing the transaction ID and funded amount
 
 #### Defined in
 
-[src/types/dispenser-client.ts:158](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L158)
+[src/types/dispenser-client.ts:158](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L158)
 
 ___
 
@@ -173,7 +173,7 @@ DispenserLimitResponse: An object containing the funding limit amount.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:188](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L188)
+[src/types/dispenser-client.ts:188](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L188)
 
 ___
 
@@ -200,7 +200,7 @@ The API response.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:110](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L110)
+[src/types/dispenser-client.ts:110](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L110)
 
 ___
 
@@ -222,4 +222,4 @@ Sends a refund request to the dispenser API for the specified refundTxnId.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:179](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L179)
+[src/types/dispenser-client.ts:179](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L179)

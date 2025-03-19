@@ -101,7 +101,7 @@ const clientManager = new ClientManager({ algodConfig, indexerConfig, kmdConfig 
 
 #### Defined in
 
-[src/types/client-manager.ts:74](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L74)
+[src/types/client-manager.ts:74](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L74)
 
 ## Properties
 
@@ -111,7 +111,7 @@ const clientManager = new ClientManager({ algodConfig, indexerConfig, kmdConfig 
 
 #### Defined in
 
-[src/types/client-manager.ts:49](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L49)
+[src/types/client-manager.ts:49](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L49)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[src/types/client-manager.ts:52](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L52)
+[src/types/client-manager.ts:52](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L52)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[src/types/client-manager.ts:125](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L125)
+[src/types/client-manager.ts:125](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L125)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[src/types/client-manager.ts:50](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L50)
+[src/types/client-manager.ts:50](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L50)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[src/types/client-manager.ts:51](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L51)
+[src/types/client-manager.ts:51](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L51)
 
 ## Accessors
 
@@ -169,7 +169,7 @@ The Algod client
 
 #### Defined in
 
-[src/types/client-manager.ts:93](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L93)
+[src/types/client-manager.ts:93](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L93)
 
 ___
 
@@ -191,7 +191,7 @@ Error if no Indexer client is configured
 
 #### Defined in
 
-[src/types/client-manager.ts:102](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L102)
+[src/types/client-manager.ts:102](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L102)
 
 ___
 
@@ -209,7 +209,7 @@ The Indexer client or `undefined`
 
 #### Defined in
 
-[src/types/client-manager.ts:111](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L111)
+[src/types/client-manager.ts:111](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L111)
 
 ___
 
@@ -231,7 +231,7 @@ Error if no KMD client is configured
 
 #### Defined in
 
-[src/types/client-manager.ts:120](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L120)
+[src/types/client-manager.ts:120](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L120)
 
 ## Methods
 
@@ -276,7 +276,7 @@ const appClient = clientManager.getAppClientByCreatorAndName({
 
 #### Defined in
 
-[src/types/client-manager.ts:284](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L284)
+[src/types/client-manager.ts:284](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L284)
 
 ___
 
@@ -316,7 +316,7 @@ const appClient = clientManager.getAppClientById({
 
 #### Defined in
 
-[src/types/client-manager.ts:307](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L307)
+[src/types/client-manager.ts:307](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L307)
 
 ___
 
@@ -359,7 +359,7 @@ const appClient = clientManager.getAppClientByNetwork({
 
 #### Defined in
 
-[src/types/client-manager.ts:330](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L330)
+[src/types/client-manager.ts:330](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L330)
 
 ___
 
@@ -413,7 +413,7 @@ const factory = clientManager.getAppFactory({
 
 #### Defined in
 
-[src/types/client-manager.ts:261](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L261)
+[src/types/client-manager.ts:261](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L261)
 
 ___
 
@@ -450,7 +450,7 @@ const client = clientManager.getTestNetDispenser(
 
 #### Defined in
 
-[src/types/client-manager.ts:215](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L215)
+[src/types/client-manager.ts:215](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L215)
 
 ___
 
@@ -486,7 +486,7 @@ const client = clientManager.getTestNetDispenserFromEnvironment(
 
 #### Defined in
 
-[src/types/client-manager.ts:234](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L234)
+[src/types/client-manager.ts:234](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L234)
 
 ___
 
@@ -544,7 +544,7 @@ const appClient = clientManager.getTypedAppClientByCreatorAndName(MyContractClie
 
 #### Defined in
 
-[src/types/client-manager.ts:358](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L358)
+[src/types/client-manager.ts:358](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L358)
 
 ___
 
@@ -590,7 +590,7 @@ const appClient = clientManager.getTypedAppClientById(MyContractClient, {
 
 #### Defined in
 
-[src/types/client-manager.ts:382](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L382)
+[src/types/client-manager.ts:382](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L382)
 
 ___
 
@@ -637,7 +637,7 @@ const appClient = clientManager.getTypedAppClientByNetwork(MyContractClient, {
 
 #### Defined in
 
-[src/types/client-manager.ts:408](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L408)
+[src/types/client-manager.ts:408](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L408)
 
 ___
 
@@ -683,7 +683,7 @@ const appFactory = clientManager.getTypedAppFactory(MyContractClient, {
 
 #### Defined in
 
-[src/types/client-manager.ts:431](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L431)
+[src/types/client-manager.ts:431](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L431)
 
 ___
 
@@ -707,7 +707,7 @@ const isLocalNet = await clientManager.isLocalNet()
 
 #### Defined in
 
-[src/types/client-manager.ts:171](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L171)
+[src/types/client-manager.ts:171](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L171)
 
 ___
 
@@ -731,7 +731,7 @@ const isMainNet = await clientManager.isMainNet()
 
 #### Defined in
 
-[src/types/client-manager.ts:195](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L195)
+[src/types/client-manager.ts:195](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L195)
 
 ___
 
@@ -755,7 +755,7 @@ const isTestNet = await clientManager.isTestNet()
 
 #### Defined in
 
-[src/types/client-manager.ts:183](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L183)
+[src/types/client-manager.ts:183](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L183)
 
 ___
 
@@ -780,7 +780,7 @@ const genesisId = network.genesisId
 
 #### Defined in
 
-[src/types/client-manager.ts:135](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L135)
+[src/types/client-manager.ts:135](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L135)
 
 ___
 
@@ -810,7 +810,7 @@ const isLocalNet = ClientManager.genesisIdIsLocalNet('testnet-v1.0')
 
 #### Defined in
 
-[src/types/client-manager.ts:159](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L159)
+[src/types/client-manager.ts:159](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L159)
 
 ___
 
@@ -841,7 +841,7 @@ const config = ClientManager.getAlgoNodeConfig('testnet', 'algod')
 
 #### Defined in
 
-[src/types/client-manager.ts:545](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L545)
+[src/types/client-manager.ts:545](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L545)
 
 ___
 
@@ -886,7 +886,7 @@ The Algod client
 
 #### Defined in
 
-[src/types/client-manager.ts:590](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L590)
+[src/types/client-manager.ts:590](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L590)
 
 ___
 
@@ -912,7 +912,7 @@ The Algod client
 
 #### Defined in
 
-[src/types/client-manager.ts:608](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L608)
+[src/types/client-manager.ts:608](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L608)
 
 ___
 
@@ -942,7 +942,7 @@ const config = ClientManager.getAlgodConfigFromEnvironment()
 
 #### Defined in
 
-[src/types/client-manager.ts:492](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L492)
+[src/types/client-manager.ts:492](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L492)
 
 ___
 
@@ -975,7 +975,7 @@ const config = ClientManager.getConfigFromEnvironmentOrLocalNet()
 
 #### Defined in
 
-[src/types/client-manager.ts:456](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L456)
+[src/types/client-manager.ts:456](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L456)
 
 ___
 
@@ -1005,7 +1005,7 @@ const config = ClientManager.getDefaultLocalNetConfig('algod')
 
 #### Defined in
 
-[src/types/client-manager.ts:561](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L561)
+[src/types/client-manager.ts:561](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L561)
 
 ___
 
@@ -1050,7 +1050,7 @@ The Indexer client
 
 #### Defined in
 
-[src/types/client-manager.ts:633](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L633)
+[src/types/client-manager.ts:633](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L633)
 
 ___
 
@@ -1076,7 +1076,7 @@ The Indexer client
 
 #### Defined in
 
-[src/types/client-manager.ts:652](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L652)
+[src/types/client-manager.ts:652](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L652)
 
 ___
 
@@ -1106,7 +1106,7 @@ const config = ClientManager.getIndexerConfigFromEnvironment()
 
 #### Defined in
 
-[src/types/client-manager.ts:519](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L519)
+[src/types/client-manager.ts:519](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L519)
 
 ___
 
@@ -1138,7 +1138,7 @@ The KMD client
 
 #### Defined in
 
-[src/types/client-manager.ts:668](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L668)
+[src/types/client-manager.ts:668](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L668)
 
 ___
 
@@ -1163,4 +1163,4 @@ The KMD client
 
 #### Defined in
 
-[src/types/client-manager.ts:683](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/client-manager.ts#L683)
+[src/types/client-manager.ts:683](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/client-manager.ts#L683)
