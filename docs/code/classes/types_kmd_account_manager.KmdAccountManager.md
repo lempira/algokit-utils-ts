@@ -45,7 +45,7 @@ Create a new KMD manager.
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:18](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L18)
+[src/types/kmd-account-manager.ts:18](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L18)
 
 ## Properties
 
@@ -55,7 +55,7 @@ Create a new KMD manager.
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:11](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L11)
+[src/types/kmd-account-manager.ts:11](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L11)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:12](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L12)
+[src/types/kmd-account-manager.ts:12](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L12)
 
 ## Methods
 
@@ -89,7 +89,7 @@ const dispenser = await kmdAccountManager.getLocalNetDispenserAccount()
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:186](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L186)
+[src/types/kmd-account-manager.ts:186](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L186)
 
 ___
 
@@ -130,7 +130,7 @@ const existingAccount = await kmdAccountManager.getOrCreateWalletAccount('accoun
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:135](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L135)
+[src/types/kmd-account-manager.ts:135](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L135)
 
 ___
 
@@ -165,7 +165,7 @@ const defaultDispenserAccount = await kmdAccountManager.getWalletAccount(
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:62](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L62)
+[src/types/kmd-account-manager.ts:62](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L62)
 
 ___
 
@@ -179,4 +179,4 @@ ___
 
 #### Defined in
 
-[src/types/kmd-account-manager.ts:27](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L27)
+[src/types/kmd-account-manager.ts:27](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/kmd-account-manager.ts#L27)

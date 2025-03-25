@@ -37,7 +37,7 @@ Omit.accounts
 
 #### Defined in
 
-[src/types/app.ts:79](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L79)
+[src/types/app.ts:79](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L79)
 
 ___
 
@@ -53,7 +53,7 @@ Omit.apps
 
 #### Defined in
 
-[src/types/app.ts:81](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L81)
+[src/types/app.ts:81](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L81)
 
 ___
 
@@ -69,7 +69,7 @@ Omit.assets
 
 #### Defined in
 
-[src/types/app.ts:83](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L83)
+[src/types/app.ts:83](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L83)
 
 ___
 
@@ -85,7 +85,7 @@ Omit.boxes
 
 #### Defined in
 
-[src/types/app.ts:77](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L77)
+[src/types/app.ts:77](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L77)
 
 ___
 
@@ -101,7 +101,7 @@ Omit.lease
 
 #### Defined in
 
-[src/types/app.ts:75](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L75)
+[src/types/app.ts:75](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L75)
 
 ___
 
@@ -113,7 +113,7 @@ If calling an ABI method then either the name of the method, or the ABI signatur
 
 #### Defined in
 
-[src/types/app-client.ts:201](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-client.ts#L201)
+[src/types/app-client.ts:201](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-client.ts#L201)
 
 ___
 
@@ -129,7 +129,7 @@ Omit.methodArgs
 
 #### Defined in
 
-[src/types/app.ts:117](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L117)
+[src/types/app.ts:117](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L117)
 
 ___
 
@@ -147,4 +147,4 @@ Omit.rekeyTo
 
 #### Defined in
 
-[src/types/app.ts:88](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L88)
+[src/types/app.ts:88](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app.ts#L88)

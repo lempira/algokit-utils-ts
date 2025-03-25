@@ -53,7 +53,7 @@ const deployer = new AppDeployer(appManager, transactionSender, indexer)
 
 #### Defined in
 
-[src/types/app-deployer.ts:128](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L128)
+[src/types/app-deployer.ts:128](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L128)
 
 ## Properties
 
@@ -63,7 +63,7 @@ const deployer = new AppDeployer(appManager, transactionSender, indexer)
 
 #### Defined in
 
-[src/types/app-deployer.ts:116](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L116)
+[src/types/app-deployer.ts:116](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L116)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[src/types/app-deployer.ts:113](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L113)
+[src/types/app-deployer.ts:113](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L113)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[src/types/app-deployer.ts:115](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L115)
+[src/types/app-deployer.ts:115](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L115)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/types/app-deployer.ts:114](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L114)
+[src/types/app-deployer.ts:114](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L114)
 
 ## Methods
 
@@ -165,7 +165,7 @@ const deployResult = await deployer.deploy({
 
 #### Defined in
 
-[src/types/app-deployer.ts:172](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L172)
+[src/types/app-deployer.ts:172](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L172)
 
 ___
 
@@ -201,7 +201,7 @@ const result = await deployer.getCreatorAppsByName(creator)
 
 #### Defined in
 
-[src/types/app-deployer.ts:495](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L495)
+[src/types/app-deployer.ts:495](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L495)
 
 ___
 
@@ -222,4 +222,4 @@ ___
 
 #### Defined in
 
-[src/types/app-deployer.ts:469](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L469)
+[src/types/app-deployer.ts:469](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/app-deployer.ts#L469)

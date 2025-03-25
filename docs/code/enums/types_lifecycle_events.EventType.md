@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[src/types/lifecycle-events.ts:5](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/lifecycle-events.ts#L5)
+[src/types/lifecycle-events.ts:5](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/lifecycle-events.ts#L5)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[src/types/lifecycle-events.ts:4](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/lifecycle-events.ts#L4)
+[src/types/lifecycle-events.ts:4](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/lifecycle-events.ts#L4)

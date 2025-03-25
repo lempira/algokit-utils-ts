@@ -50,7 +50,7 @@ Optional override for how to get an account; this allows you to retrieve account
 
 #### Defined in
 
-[src/types/testing.ts:62](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/testing.ts#L62)
+[src/types/testing.ts:62](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/testing.ts#L62)
 
 ___
 
@@ -62,7 +62,7 @@ An optional algod client, if not specified then it will create one against `algo
 
 #### Defined in
 
-[src/types/testing.ts:54](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/testing.ts#L54)
+[src/types/testing.ts:54](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/testing.ts#L54)
 
 ___
 
@@ -78,7 +78,7 @@ Partial.algodConfig
 
 #### Defined in
 
-[src/types/network-client.ts:16](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/network-client.ts#L16)
+[src/types/network-client.ts:16](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/network-client.ts#L16)
 
 ___
 
@@ -90,7 +90,7 @@ An optional indexer client, if not specified then it will create one against `in
 
 #### Defined in
 
-[src/types/testing.ts:56](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/testing.ts#L56)
+[src/types/testing.ts:56](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/testing.ts#L56)
 
 ___
 
@@ -106,7 +106,7 @@ Partial.indexerConfig
 
 #### Defined in
 
-[src/types/network-client.ts:18](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/network-client.ts#L18)
+[src/types/network-client.ts:18](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/network-client.ts#L18)
 
 ___
 
@@ -118,7 +118,7 @@ An optional kmd client, if not specified then it will create one against `kmdCon
 
 #### Defined in
 
-[src/types/testing.ts:58](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/testing.ts#L58)
+[src/types/testing.ts:58](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/testing.ts#L58)
 
 ___
 
@@ -134,7 +134,7 @@ Partial.kmdConfig
 
 #### Defined in
 
-[src/types/network-client.ts:20](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/network-client.ts#L20)
+[src/types/network-client.ts:20](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/network-client.ts#L20)
 
 ___
 
@@ -146,4 +146,4 @@ The amount of funds to allocate to the default testing account, if not specified
 
 #### Defined in
 
-[src/types/testing.ts:60](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/testing.ts#L60)
+[src/types/testing.ts:60](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/testing.ts#L60)

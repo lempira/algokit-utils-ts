@@ -31,4 +31,4 @@
 
 #### Defined in
 
-[src/types/lifecycle-events.ts:8](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/lifecycle-events.ts#L8)
+[src/types/lifecycle-events.ts:8](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/lifecycle-events.ts#L8)
