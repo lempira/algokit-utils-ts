@@ -22,4 +22,4 @@ An array of TEAL source debug event data
 
 #### Defined in
 
-[src/types/debugging.ts:40](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/debugging.ts#L40)
+[src/types/debugging.ts:40](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/debugging.ts#L40)

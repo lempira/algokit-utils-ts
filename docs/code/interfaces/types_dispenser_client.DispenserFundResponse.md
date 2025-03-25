@@ -23,7 +23,7 @@ The number of µAlgo that was funded.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:29](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L29)
+[src/types/dispenser-client.ts:29](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L29)
 
 ___
 
@@ -35,4 +35,4 @@ The ID of the transaction that was issued to fund the account.
 
 #### Defined in
 
-[src/types/dispenser-client.ts:27](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L27)
+[src/types/dispenser-client.ts:27](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/dispenser-client.ts#L27)

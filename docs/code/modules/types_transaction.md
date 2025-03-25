@@ -36,7 +36,7 @@ ARC-0002 compatible transaction note components https://github.com/algorandfound
 
 #### Defined in
 
-[src/types/transaction.ts:16](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transaction.ts#L16)
+[src/types/transaction.ts:16](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/transaction.ts#L16)
 
 ___
 
@@ -48,7 +48,7 @@ Result from sending a single transaction.
 
 #### Defined in
 
-[src/types/transaction.ts:50](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transaction.ts#L50)
+[src/types/transaction.ts:50](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/transaction.ts#L50)
 
 ___
 
@@ -68,7 +68,7 @@ many types of accounts, including:
 
 #### Defined in
 
-[src/types/transaction.ts:108](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transaction.ts#L108)
+[src/types/transaction.ts:108](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/transaction.ts#L108)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[src/types/transaction.ts:12](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transaction.ts#L12)
+[src/types/transaction.ts:12](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/transaction.ts#L12)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[src/types/transaction.ts:14](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transaction.ts#L14)
+[src/types/transaction.ts:14](https://github.com/lempira/algokit-utils-ts/blob/main/src/types/transaction.ts#L14)

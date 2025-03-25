@@ -256,7 +256,7 @@ Account information at a given round.
 
 #### Defined in
 
-[src/account/account.ts:135](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L135)
+[src/account/account.ts:135](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L135)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-[src/account/account.ts:132](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L132)
+[src/account/account.ts:132](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L132)
 
 ## Variables
 
@@ -282,7 +282,7 @@ ___
 
 #### Defined in
 
-[src/amount.ts:93](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/amount.ts#L93)
+[src/amount.ts:93](https://github.com/lempira/algokit-utils-ts/blob/main/src/amount.ts#L93)
 
 ___
 
@@ -294,7 +294,7 @@ The AlgoKit config. To update it use the configure method.
 
 #### Defined in
 
-[src/config.ts:4](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/config.ts#L4)
+[src/config.ts:4](https://github.com/lempira/algokit-utils-ts/blob/main/src/config.ts#L4)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[src/transaction/transaction.ts:33](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L33)
+[src/transaction/transaction.ts:33](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L33)
 
 ___
 
@@ -314,7 +314,7 @@ ___
 
 #### Defined in
 
-[src/transaction/transaction.ts:32](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L32)
+[src/transaction/transaction.ts:32](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L32)
 
 ___
 
@@ -324,7 +324,7 @@ ___
 
 #### Defined in
 
-[src/transaction/transaction.ts:31](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L31)
+[src/transaction/transaction.ts:31](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L31)
 
 ## Functions
 
@@ -346,7 +346,7 @@ Returns an amount of Algo using AlgoAmount
 
 #### Defined in
 
-[src/amount.ts:68](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/amount.ts#L68)
+[src/amount.ts:68](https://github.com/lempira/algokit-utils-ts/blob/main/src/amount.ts#L68)
 
 ___
 
@@ -368,7 +368,7 @@ Returns an amount of Algo using AlgoAmount
 
 #### Defined in
 
-[src/amount.ts:61](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/amount.ts#L61)
+[src/amount.ts:61](https://github.com/lempira/algokit-utils-ts/blob/main/src/amount.ts#L61)
 
 ___
 
@@ -407,7 +407,7 @@ algokit.bulkOptIn({ account: account, assetIds: [12345, 67890] }, algod)
 
 #### Defined in
 
-[src/asset.ts:130](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/asset.ts#L130)
+[src/asset.ts:130](https://github.com/lempira/algokit-utils-ts/blob/main/src/asset.ts#L130)
 
 ___
 
@@ -446,7 +446,7 @@ algokit.bulkOptOut({ account: account, assetIds: [12345, 67890] }, algod)
 
 #### Defined in
 
-[src/asset.ts:157](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/asset.ts#L157)
+[src/asset.ts:157](https://github.com/lempira/algokit-utils-ts/blob/main/src/asset.ts#L157)
 
 ___
 
@@ -481,7 +481,7 @@ await algokit.assetOptIn({ account, assetId }, algod)
 
 #### Defined in
 
-[src/asset.ts:67](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/asset.ts#L67)
+[src/asset.ts:67](https://github.com/lempira/algokit-utils-ts/blob/main/src/asset.ts#L67)
 
 ___
 
@@ -516,7 +516,7 @@ await algokit.assetOptOut({ account, assetId, assetCreatorAddress }, algod)
 
 #### Defined in
 
-[src/asset.ts:98](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/asset.ts#L98)
+[src/asset.ts:98](https://github.com/lempira/algokit-utils-ts/blob/main/src/asset.ts#L98)
 
 ___
 
@@ -546,7 +546,7 @@ Issues a call to a given app.
 
 #### Defined in
 
-[src/app.ts:187](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L187)
+[src/app.ts:187](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L187)
 
 ___
 
@@ -575,7 +575,7 @@ the estimated rate.
 
 #### Defined in
 
-[src/transaction/transaction.ts:1057](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1057)
+[src/transaction/transaction.ts:1057](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1057)
 
 ___
 
@@ -604,7 +604,7 @@ Compiles the given TEAL using algod and returns the result, including source map
 
 #### Defined in
 
-[src/app.ts:419](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L419)
+[src/app.ts:419](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L419)
 
 ___
 
@@ -639,7 +639,7 @@ Allows for control of fees on a `Transaction` or `SuggestedParams` object
 
 #### Defined in
 
-[src/transaction/transaction.ts:1084](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1084)
+[src/transaction/transaction.ts:1084](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1084)
 
 ___
 
@@ -669,7 +669,7 @@ Creates a smart contract app, returns the details of the created app.
 
 #### Defined in
 
-[src/app.ts:44](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L44)
+[src/app.ts:44](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L44)
 
 ___
 
@@ -704,7 +704,7 @@ await algokit.createAsset({ creator: account, total: 1, decimals: 0, name: 'My a
 
 #### Defined in
 
-[src/asset.ts:23](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/asset.ts#L23)
+[src/asset.ts:23](https://github.com/lempira/algokit-utils-ts/blob/main/src/asset.ts#L23)
 
 ___
 
@@ -733,7 +733,7 @@ generic object keyed by the UTF-8 value of the key.
 
 #### Defined in
 
-[src/app.ts:345](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L345)
+[src/app.ts:345](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L345)
 
 ___
 
@@ -771,7 +771,7 @@ To understand the architecture decisions behind this functionality please see ht
 
 #### Defined in
 
-[src/app-deploy.ts:51](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L51)
+[src/app-deploy.ts:51](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L51)
 
 ___
 
@@ -811,7 +811,7 @@ algokit.encodeLease(new Uint8Array([1, 2, 3]))
 
 #### Defined in
 
-[src/transaction/transaction.ts:74](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L74)
+[src/transaction/transaction.ts:74](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L74)
 
 ___
 
@@ -846,7 +846,7 @@ Encodes a transaction note into a byte array ready to be included in an Algorand
 
 #### Defined in
 
-[src/transaction/transaction.ts:50](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L50)
+[src/transaction/transaction.ts:50](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L50)
 
 ___
 
@@ -886,7 +886,7 @@ https://developer.algorand.org/docs/get-details/accounts/#minimum-balance
 
 #### Defined in
 
-[src/transfer/transfer.ts:26](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transfer/transfer.ts#L26)
+[src/transfer/transfer.ts:26](https://github.com/lempira/algokit-utils-ts/blob/main/src/transfer/transfer.ts#L26)
 
 ___
 
@@ -914,7 +914,7 @@ Returns the encoded ABI spec for a given ABI Method
 
 #### Defined in
 
-[src/app.ts:430](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L430)
+[src/app.ts:430](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L430)
 
 ___
 
@@ -943,7 +943,7 @@ Returns any ABI return values for the given app call arguments and transaction c
 
 #### Defined in
 
-[src/app.ts:235](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L235)
+[src/app.ts:235](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L235)
 
 ___
 
@@ -966,7 +966,7 @@ Converts `bigint`'s for Uint's < 64 to `number` for easier use.
 
 #### Defined in
 
-[src/transaction/transaction.ts:927](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L927)
+[src/transaction/transaction.ts:927](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L927)
 
 ___
 
@@ -1015,7 +1015,7 @@ If that code runs against LocalNet then a wallet called `ACCOUNT` will automatic
 
 #### Defined in
 
-[src/account/get-account.ts:41](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/get-account.ts#L41)
+[src/account/get-account.ts:41](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/get-account.ts#L41)
 
 ▸ **getAccount**(`account`, `algod`, `kmdClient?`): `Promise`\<`Account` \| [`SigningAccount`](../classes/types_account.SigningAccount.md)\>
 
@@ -1053,7 +1053,7 @@ If that code runs against LocalNet then a wallet called `ACCOUNT` will automatic
 
 #### Defined in
 
-[src/account/get-account.ts:68](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/get-account.ts#L68)
+[src/account/get-account.ts:68](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/get-account.ts#L68)
 
 ___
 
@@ -1079,7 +1079,7 @@ Returns the string address of an Algorand account from a base64 encoded version 
 
 #### Defined in
 
-[src/account/account.ts:128](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L128)
+[src/account/account.ts:128](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L128)
 
 ___
 
@@ -1105,7 +1105,7 @@ Returns an account's address as a byte array
 
 #### Defined in
 
-[src/account/account.ts:117](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L117)
+[src/account/account.ts:117](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L117)
 
 ___
 
@@ -1145,7 +1145,7 @@ const accountInfo = await account.getAccountAssetInformation(address, assetId, a
 
 #### Defined in
 
-[src/account/account.ts:201](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L201)
+[src/account/account.ts:201](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L201)
 
 ___
 
@@ -1178,7 +1178,7 @@ environment variables
 
 #### Defined in
 
-[src/account/get-account-config-from-environment.ts:13](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/get-account-config-from-environment.ts#L13)
+[src/account/get-account-config-from-environment.ts:13](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/get-account-config-from-environment.ts#L13)
 
 ___
 
@@ -1216,7 +1216,7 @@ const accountInfo = await account.getInformation(address, algod);
 
 #### Defined in
 
-[src/account/account.ts:156](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L156)
+[src/account/account.ts:156](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L156)
 
 ___
 
@@ -1272,7 +1272,7 @@ Returns an algod SDK client that automatically retries transient failures on ide
 
 #### Defined in
 
-[src/network-client.ts:88](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L88)
+[src/network-client.ts:88](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L88)
 
 ___
 
@@ -1327,7 +1327,7 @@ Returns an indexer SDK client that automatically retries transient failures on i
 
 #### Defined in
 
-[src/network-client.ts:121](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L121)
+[src/network-client.ts:121](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L121)
 
 ___
 
@@ -1368,7 +1368,7 @@ KMD client allows you to export private keys, which is useful to get the default
 
 #### Defined in
 
-[src/network-client.ts:144](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L144)
+[src/network-client.ts:144](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L144)
 
 ___
 
@@ -1395,7 +1395,7 @@ Returns the Algorand configuration to point to the AlgoNode service
 
 #### Defined in
 
-[src/network-client.ts:43](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L43)
+[src/network-client.ts:43](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L43)
 
 ___
 
@@ -1415,7 +1415,7 @@ Retrieve the algod configuration from environment variables (expects to be calle
 
 #### Defined in
 
-[src/network-client.ts:22](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L22)
+[src/network-client.ts:22](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L22)
 
 ___
 
@@ -1444,7 +1444,7 @@ Returns the app args ready to load onto an ABI method call in `AtomicTransaction
 
 #### Defined in
 
-[src/app.ts:378](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L378)
+[src/app.ts:378](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L378)
 
 ___
 
@@ -1472,7 +1472,7 @@ Returns the app args ready to load onto an app `Transaction` object
 
 #### Defined in
 
-[src/app.ts:356](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L356)
+[src/app.ts:356](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L356)
 
 ___
 
@@ -1500,7 +1500,7 @@ Returns the names of the boxes for the given app.
 
 #### Defined in
 
-[src/app.ts:276](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L276)
+[src/app.ts:276](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L276)
 
 ___
 
@@ -1529,7 +1529,7 @@ Returns the value of the given box name for the given app.
 
 #### Defined in
 
-[src/app.ts:288](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L288)
+[src/app.ts:288](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L288)
 
 ___
 
@@ -1557,7 +1557,7 @@ Returns the value of the given box name for the given app decoded based on the g
 
 #### Defined in
 
-[src/app.ts:314](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L314)
+[src/app.ts:314](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L314)
 
 ___
 
@@ -1586,7 +1586,7 @@ Returns the value of the given box names for the given app.
 
 #### Defined in
 
-[src/app.ts:300](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L300)
+[src/app.ts:300](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L300)
 
 ___
 
@@ -1614,7 +1614,7 @@ Returns the value of the given box names for the given app decoded based on the 
 
 #### Defined in
 
-[src/app.ts:329](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L329)
+[src/app.ts:329](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L329)
 
 ___
 
@@ -1643,7 +1643,7 @@ Gets the current data for the given app from algod.
 
 #### Defined in
 
-[src/app.ts:406](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L406)
+[src/app.ts:406](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L406)
 
 ___
 
@@ -1706,7 +1706,7 @@ const client = algokit.getAppClient(
 
 #### Defined in
 
-[src/app-client.ts:40](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-client.ts#L40)
+[src/app-client.ts:40](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-client.ts#L40)
 
 ___
 
@@ -1751,7 +1751,7 @@ const client = algokit.getAppClientByCreatorAndName(
 
 #### Defined in
 
-[src/app-client.ts:93](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-client.ts#L93)
+[src/app-client.ts:93](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-client.ts#L93)
 
 ___
 
@@ -1795,7 +1795,7 @@ const client = algokit.getAppClientById(
 
 #### Defined in
 
-[src/app-client.ts:66](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-client.ts#L66)
+[src/app-client.ts:66](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-client.ts#L66)
 
 ___
 
@@ -1823,7 +1823,7 @@ Return the transaction note for an app deployment.
 
 #### Defined in
 
-[src/app-deploy.ts:271](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L271)
+[src/app-deploy.ts:271](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L271)
 
 ___
 
@@ -1852,7 +1852,7 @@ Returns the current global state values for the given app ID
 
 #### Defined in
 
-[src/app.ts:252](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L252)
+[src/app.ts:252](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L252)
 
 ___
 
@@ -1882,7 +1882,7 @@ Returns the current global state values for the given app ID and account
 
 #### Defined in
 
-[src/app.ts:265](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L265)
+[src/app.ts:265](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L265)
 
 ___
 
@@ -1914,7 +1914,7 @@ If given an `AppCallType` will convert the string enum to the correct underlying
 
 #### Defined in
 
-[src/app.ts:154](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L154)
+[src/app.ts:154](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L154)
 
 ___
 
@@ -1942,7 +1942,7 @@ Returns the array of transactions currently present in the given `AtomicTransact
 
 #### Defined in
 
-[src/transaction/transaction.ts:1133](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1133)
+[src/transaction/transaction.ts:1133](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1133)
 
 ___
 
@@ -1970,7 +1970,7 @@ Returns a `algosdk.BoxReference` given a `BoxIdentifier` or `BoxReference`.
 
 #### Defined in
 
-[src/app.ts:389](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L389)
+[src/app.ts:389](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L389)
 
 ___
 
@@ -1990,7 +1990,7 @@ Retrieve configurations from environment variables when defined or get defaults 
 
 #### Defined in
 
-[src/network-client.ts:13](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L13)
+[src/network-client.ts:13](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L13)
 
 ___
 
@@ -2021,7 +2021,7 @@ Returns a lookup of name => app metadata (id, address, ...metadata) for all apps
 
 #### Defined in
 
-[src/app-deploy.ts:244](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L244)
+[src/app-deploy.ts:244](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L244)
 
 ___
 
@@ -2047,7 +2047,7 @@ Returns the Algorand configuration to point to the default LocalNet
 
 #### Defined in
 
-[src/network-client.ts:54](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L54)
+[src/network-client.ts:54](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L54)
 
 ___
 
@@ -2077,7 +2077,7 @@ If running on LocalNet then it will return the default dispenser account automat
 
 #### Defined in
 
-[src/account/get-dispenser-account.ts:19](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/get-dispenser-account.ts#L19)
+[src/account/get-dispenser-account.ts:19](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/get-dispenser-account.ts#L19)
 
 ___
 
@@ -2097,7 +2097,7 @@ Retrieve the indexer configuration from environment variables (expects to be cal
 
 #### Defined in
 
-[src/network-client.ts:31](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L31)
+[src/network-client.ts:31](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L31)
 
 ___
 
@@ -2136,7 +2136,7 @@ const defaultDispenserAccount = await getKmdWalletAccount(algod,
 
 #### Defined in
 
-[src/localnet/get-kmd-wallet-account.ts:27](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/localnet/get-kmd-wallet-account.ts#L27)
+[src/localnet/get-kmd-wallet-account.ts:27](https://github.com/lempira/algokit-utils-ts/blob/main/src/localnet/get-kmd-wallet-account.ts#L27)
 
 ___
 
@@ -2163,7 +2163,7 @@ Returns an Algorand account with private key loaded for the default LocalNet dis
 
 #### Defined in
 
-[src/localnet/get-localnet-dispenser-account.ts:15](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/localnet/get-localnet-dispenser-account.ts#L15)
+[src/localnet/get-localnet-dispenser-account.ts:15](https://github.com/lempira/algokit-utils-ts/blob/main/src/localnet/get-localnet-dispenser-account.ts#L15)
 
 ___
 
@@ -2201,7 +2201,7 @@ If this is used via `mnemonicAccountFromEnvironment`, then you can even use the 
 
 #### Defined in
 
-[src/localnet/get-or-create-kmd-wallet-account.ts:28](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/localnet/get-or-create-kmd-wallet-account.ts#L28)
+[src/localnet/get-or-create-kmd-wallet-account.ts:28](https://github.com/lempira/algokit-utils-ts/blob/main/src/localnet/get-or-create-kmd-wallet-account.ts#L28)
 
 ___
 
@@ -2230,7 +2230,7 @@ Returns the public address of the given transaction sender.
 
 #### Defined in
 
-[src/transaction/transaction.ts:110](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L110)
+[src/transaction/transaction.ts:110](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L110)
 
 ___
 
@@ -2260,7 +2260,7 @@ This function has memoization, so will return the same transaction signer for a 
 
 #### Defined in
 
-[src/transaction/transaction.ts:168](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L168)
+[src/transaction/transaction.ts:168](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L168)
 
 ___
 
@@ -2300,7 +2300,7 @@ const client = algokit.getTestNetDispenserApiClient(
 
 #### Defined in
 
-[src/dispenser-client.ts:21](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/dispenser-client.ts#L21)
+[src/dispenser-client.ts:21](https://github.com/lempira/algokit-utils-ts/blob/main/src/dispenser-client.ts#L21)
 
 ___
 
@@ -2329,7 +2329,7 @@ Returns suggested transaction parameters from algod unless some are already prov
 
 #### Defined in
 
-[src/transaction/transaction.ts:1111](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1111)
+[src/transaction/transaction.ts:1111](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1111)
 
 ___
 
@@ -2360,7 +2360,7 @@ AtomicTransactionComposer's addTransaction method.
 
 #### Defined in
 
-[src/transaction/transaction.ts:127](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L127)
+[src/transaction/transaction.ts:127](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L127)
 
 ___
 
@@ -2386,7 +2386,7 @@ Returns true if the algod client is pointing to a LocalNet Algorand network
 
 #### Defined in
 
-[src/localnet/is-localnet.ts:9](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/localnet/is-localnet.ts#L9)
+[src/localnet/is-localnet.ts:9](https://github.com/lempira/algokit-utils-ts/blob/main/src/localnet/is-localnet.ts#L9)
 
 ___
 
@@ -2410,7 +2410,7 @@ Use `await algorand.client.isMainNet()` or `await new ClientManager({ algod }).i
 
 #### Defined in
 
-[src/network-client.ts:154](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L154)
+[src/network-client.ts:154](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L154)
 
 ___
 
@@ -2441,7 +2441,7 @@ Returns true is there is a breaking change in the application state schema from 
 
 #### Defined in
 
-[src/app-deploy.ts:229](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L229)
+[src/app-deploy.ts:229](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L229)
 
 ___
 
@@ -2465,7 +2465,7 @@ Use `await algorand.client.isTestNet()` or `await new ClientManager({ algod }).i
 
 #### Defined in
 
-[src/network-client.ts:149](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/network-client.ts#L149)
+[src/network-client.ts:149](https://github.com/lempira/algokit-utils-ts/blob/main/src/network-client.ts#L149)
 
 ___
 
@@ -2487,7 +2487,7 @@ Returns an amount of µAlgo using AlgoAmount
 
 #### Defined in
 
-[src/amount.ts:82](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/amount.ts#L82)
+[src/amount.ts:82](https://github.com/lempira/algokit-utils-ts/blob/main/src/amount.ts#L82)
 
 ___
 
@@ -2509,7 +2509,7 @@ Returns an amount of µAlgo using AlgoAmount
 
 #### Defined in
 
-[src/amount.ts:75](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/amount.ts#L75)
+[src/amount.ts:75](https://github.com/lempira/algokit-utils-ts/blob/main/src/amount.ts#L75)
 
 ___
 
@@ -2537,7 +2537,7 @@ This is a wrapper around algosdk.mnemonicToSecretKey to provide a more friendly/
 
 #### Defined in
 
-[src/account/mnemonic-account.ts:14](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/mnemonic-account.ts#L14)
+[src/account/mnemonic-account.ts:14](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/mnemonic-account.ts#L14)
 
 ___
 
@@ -2587,7 +2587,7 @@ If not running against LocalNet then it will use proces.env.MY_ACCOUNT_MNEMONIC 
 
 #### Defined in
 
-[src/account/account.ts:97](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L97)
+[src/account/account.ts:97](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L97)
 
 ___
 
@@ -2616,7 +2616,7 @@ Returns an account wrapper that supports partial or full multisig signing.
 
 #### Defined in
 
-[src/account/account.ts:24](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L24)
+[src/account/account.ts:24](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L24)
 
 ___
 
@@ -2643,7 +2643,7 @@ The simulation result, which includes various details about how the transactions
 
 #### Defined in
 
-[src/transaction/perform-atomic-transaction-composer-simulate.ts:14](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/perform-atomic-transaction-composer-simulate.ts#L14)
+[src/transaction/perform-atomic-transaction-composer-simulate.ts:14](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/perform-atomic-transaction-composer-simulate.ts#L14)
 
 ___
 
@@ -2674,7 +2674,7 @@ Looks for `TMPL_{parameter}` for template replacements.
 
 #### Defined in
 
-[src/app-deploy.ts:309](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L309)
+[src/app-deploy.ts:309](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L309)
 
 ___
 
@@ -2707,7 +2707,7 @@ Looks for `TMPL_{parameter}` for template replacements.
 
 #### Defined in
 
-[src/app-deploy.ts:326](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L326)
+[src/app-deploy.ts:326](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L326)
 
 ___
 
@@ -2735,7 +2735,7 @@ This function persists the source maps for the given sources.
 
 #### Defined in
 
-[src/debugging/debugging.ts:8](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/debugging/debugging.ts#L8)
+[src/debugging/debugging.ts:8](https://github.com/lempira/algokit-utils-ts/blob/main/src/debugging/debugging.ts#L8)
 
 ___
 
@@ -2761,7 +2761,7 @@ A new ATC with the resources populated into the transactions
 
 #### Defined in
 
-[src/transaction/transaction.ts:382](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L382)
+[src/transaction/transaction.ts:382](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L382)
 
 ___
 
@@ -2790,7 +2790,7 @@ A new ATC with the changes applied
 
 #### Defined in
 
-[src/transaction/transaction.ts:401](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L401)
+[src/transaction/transaction.ts:401](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L401)
 
 ___
 
@@ -2812,7 +2812,7 @@ This is a wrapper around algosdk.generateAccount to provide a more friendly/obvi
 
 #### Defined in
 
-[src/account/account.ts:60](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L60)
+[src/account/account.ts:60](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L60)
 
 ___
 
@@ -2849,7 +2849,7 @@ await algokit.rekeyAccount({ from, rekeyTo }, algod)
 
 #### Defined in
 
-[src/transfer/transfer.ts:125](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transfer/transfer.ts#L125)
+[src/transfer/transfer.ts:125](https://github.com/lempira/algokit-utils-ts/blob/main/src/transfer/transfer.ts#L125)
 
 ___
 
@@ -2878,7 +2878,7 @@ Returns an account wrapper that supports a rekeyed account.
 
 #### Defined in
 
-[src/account/account.ts:36](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L36)
+[src/account/account.ts:36](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L36)
 
 ___
 
@@ -2915,7 +2915,7 @@ Note: If these values are not undefined, but the corresponding `TMPL_*` value
 
 #### Defined in
 
-[src/app-deploy.ts:294](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L294)
+[src/app-deploy.ts:294](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L294)
 
 ___
 
@@ -2940,7 +2940,7 @@ An object with transaction IDs, transactions, group transaction ID (`groupTransa
 
 #### Defined in
 
-[src/transaction/transaction.ts:776](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L776)
+[src/transaction/transaction.ts:776](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L776)
 
 ___
 
@@ -2969,7 +2969,7 @@ Signs and sends a group of [up to 16](https://developer.algorand.org/docs/get-de
 
 #### Defined in
 
-[src/transaction/transaction.ts:956](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L956)
+[src/transaction/transaction.ts:956](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L956)
 
 ___
 
@@ -3001,7 +3001,7 @@ Prepares a transaction for sending and then (if instructed) signs and sends the 
 
 #### Defined in
 
-[src/transaction/transaction.ts:209](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L209)
+[src/transaction/transaction.ts:209](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L209)
 
 ___
 
@@ -3032,7 +3032,7 @@ Signs a single transaction by the given signer.
 
 #### Defined in
 
-[src/transaction/transaction.ts:186](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L186)
+[src/transaction/transaction.ts:186](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L186)
 
 ___
 
@@ -3060,7 +3060,7 @@ Remove comments from TEAL Code
 
 #### Defined in
 
-[src/app-deploy.ts:351](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app-deploy.ts#L351)
+[src/app-deploy.ts:351](https://github.com/lempira/algokit-utils-ts/blob/main/src/app-deploy.ts#L351)
 
 ___
 
@@ -3082,7 +3082,7 @@ Returns an amount of µAlgo to cover standard fees for the given number of trans
 
 #### Defined in
 
-[src/amount.ts:89](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/amount.ts#L89)
+[src/amount.ts:89](https://github.com/lempira/algokit-utils-ts/blob/main/src/amount.ts#L89)
 
 ___
 
@@ -3111,7 +3111,7 @@ Returns an account wrapper that supports a transaction signer with associated se
 
 #### Defined in
 
-[src/account/account.ts:48](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/account/account.ts#L48)
+[src/account/account.ts:48](https://github.com/lempira/algokit-utils-ts/blob/main/src/account/account.ts#L48)
 
 ___
 
@@ -3146,7 +3146,7 @@ await algokit.transferAlgos({ from, to, amount: algokit.algo(1) }, algod)
 
 #### Defined in
 
-[src/transfer/transfer-algos.ts:22](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transfer/transfer-algos.ts#L22)
+[src/transfer/transfer-algos.ts:22](https://github.com/lempira/algokit-utils-ts/blob/main/src/transfer/transfer-algos.ts#L22)
 
 ___
 
@@ -3181,7 +3181,7 @@ await algokit.transferAsset({ from, to, assetId, amount }, algod)
 
 #### Defined in
 
-[src/transfer/transfer.ts:90](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transfer/transfer.ts#L90)
+[src/transfer/transfer.ts:90](https://github.com/lempira/algokit-utils-ts/blob/main/src/transfer/transfer.ts#L90)
 
 ___
 
@@ -3211,7 +3211,7 @@ Updates a smart contract app.
 
 #### Defined in
 
-[src/app.ts:104](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/app.ts#L104)
+[src/app.ts:104](https://github.com/lempira/algokit-utils-ts/blob/main/src/app.ts#L104)
 
 ___
 
@@ -3242,4 +3242,4 @@ Throws an error if the transaction is not confirmed or rejected in the next `tim
 
 #### Defined in
 
-[src/transaction/transaction.ts:1000](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1000)
+[src/transaction/transaction.ts:1000](https://github.com/lempira/algokit-utils-ts/blob/main/src/transaction/transaction.ts#L1000)
