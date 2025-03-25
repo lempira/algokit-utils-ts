@@ -8,7 +8,7 @@ Note: If you prefer Python there's an equivalent [Python utility library](https:
 
 [Install](#install) | [Documentation](./docs/README.md)
 
-## Install
+# Install
 
 Before installing, you'll need to decide on the version you want to target. Version 7 and 8 have the same feature set, however v7 leverages algosdk@>=2.9.0<3.0, whereas v8 leverages algosdk@>=3.0.0. Your project and it's dependencies will help you decide which version to target.
 
