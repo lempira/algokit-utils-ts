@@ -28,6 +28,8 @@
 - [AsyncEventEmitter](classes/AsyncEventEmitter.md)
 - [ClientManager](classes/ClientManager.md)
 - [KmdAccountManager](classes/KmdAccountManager.md)
+- [LocalNetManager](classes/LocalNetManager.md)
+- [NetworkManager](classes/NetworkManager.md)
 - [TestNetDispenserApiClient](classes/TestNetDispenserApiClient.md)
 - [TransactionComposer](classes/TransactionComposer.md)
 - [UpdatableConfig](classes/UpdatableConfig.md)
@@ -72,6 +74,7 @@
 - [TransactionWithSigner](interfaces/TransactionWithSigner.md)
 - [TypedAppClient](interfaces/TypedAppClient.md)
 - [TypedAppFactory](interfaces/TypedAppFactory.md)
+- [WaitUntilTimestampOptions](interfaces/WaitUntilTimestampOptions.md)
 
 ## Type Aliases
 
